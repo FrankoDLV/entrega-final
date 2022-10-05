@@ -106,10 +106,16 @@
 .main {
   background-image: url(../image/Fondo/fondo-12.JPG);
   background-size: cover;
-  height: 750px;
+  height: 500px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.main h1 {
+  position: relative;
+  top: -2rem;
+  color: #f6e3d1;
 }
 .main .container form {
   background-color: #F9DBBD;
@@ -419,7 +425,8 @@
 }
 
 .footer {
-  background-color: #F9DBBD;
+  background-image: url(../image/Fondo/footer.png);
+  background-size: cover;
 }
 .footer .container {
   max-width: 1440px;
@@ -435,6 +442,29 @@
 }
 .footer .container .footer__logo img {
   width: 80px;
+  margin-left: 1em;
+}
+.footer .container .footer__registro .footer_form {
+  margin-right: 0.9em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+}
+.footer .container .footer__registro .footer_form input {
+  background-color: #f6e3d1;
+  color: #450920;
+  border: 2px solid black;
+}
+.footer .container .footer__registro button {
+  width: 60%;
+  background-color: #f6e3d1;
+  border-color: #450920;
+  border-right: 3.7px solid #450920;
+  border-bottom: 3.2px solid #450920;
+  color: #450920;
+  border-radius: 6px;
+  padding: 5px;
 }
 @media (max-width: 680px) {
   .footer {
@@ -451,8 +481,29 @@
   .footer .container div {
     text-align: center;
   }
-  .footer .footer__logo img {
+  .footer .container .footer__logo img {
     width: 100px;
+  }
+  .footer .container .footer__registro .footer_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+  }
+  .footer .container .footer__registro .footer_form input {
+    background-color: #f6e3d1;
+    color: #450920;
+    border: 2px solid black;
+  }
+  .footer .container .footer__registro button {
+    width: 60%;
+    background-color: #f6e3d1;
+    border-color: #450920;
+    border-right: 3.7px solid #450920;
+    border-bottom: 3.2px solid #450920;
+    color: #450920;
+    border-radius: 6px;
+    padding: 5px;
   }
 }
 
