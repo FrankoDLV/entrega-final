@@ -1,0 +1,98 @@
+.header {
+    background-color: map-get($colores , primario);
+    z-index: 2;
+    
+    width: 100%;
+
+
+
+
+    .container {
+        max-width: 1440px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: map-get($colores , primario);
+        padding: 0.4em 1em;
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        h1 {
+            img {
+                width: 60px;
+            }
+        }
+
+        .bx {
+            font-size: 40px;
+            color: map-get($colores , secundario);
+            display: none;
+
+        }
+
+        #btn-menu {
+            display: none;
+        }
+
+        .nav {
+            .nav_list {
+                display: flex;
+                gap: 25px;
+
+                .nav_link {
+                    a {
+                        color: map-get($colores , text-color);
+                    }
+                }
+            }
+        }
+
+    }
+
+
+
+    @media (max-width:600px) {
+        position: relative;
+        height: 60px;
+
+        .container {
+            max-width: 350px;
+
+            .bx {
+                display: flex;
+                font-size: 40px;
+            }
+
+            #btn-menu {
+                display: none;
+
+                &:checked~.nav {
+                    top: -250px;
+
+
+                }
+
+            }
+
+
+            .nav {
+                position: absolute;
+                top: 60px;
+                z-index: 0;
+                right: 0;
+                transition: all 0.5s ease;
+                background-color: map-get($colores , primario);
+
+                .nav_list {
+                    flex-direction: column;
+                    width: 150px;
+                    padding: 25px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,204 @@
+.hero__contacto {
+  background-image: url(../image/Fondo/fondo-11.JPG);
+  background-size: cover;
+
+  .container {
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 50px 0;
+    height: 750px;
+
+    p {
+      color: white;
+      font-size: 30px;
+      font-weight: 200px;
+    }
+
+    h2 {
+      color: white;
+      font-size: 24px;
+      font-weight: 200px;
+    }
+  }
+
+  @media (max-width:600px) {
+    .container {
+      p {
+        text-align: center;
+        width: 300px;
+      }
+    }
+
+  }
+}
+
+.contacto {
+  position: relative;
+
+  .container {
+    .form__container {
+      background-color: map-get($colores, primario);
+      position: absolute;
+      display: flex;
+      border-radius: 25px;
+      top: -500px;
+      right: calc(50% - 300px);
+      margin: auto;
+      width: 600px;
+      height: 380px;
+
+      .form__contacto {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px;
+        width: 100%;
+
+        .nombre {
+          display: flex;
+          gap: 10px;
+        }
+
+        .datos {
+          display: flex;
+          gap: 10px;
+        }
+
+        input {
+          background-color: map-get($colores, primario);
+          border: none;
+          border-bottom: 1px solid black;
+          width: 100%;
+          gap: 15px;
+          height: 35px;
+          font-size: 14px;
+          outline: none;
+
+
+        }
+
+        textarea {
+          background-color: map-get($colores , primario);
+          border: none;
+          height: 500px;
+          resize: none;
+          font-size: 14px;
+          border-bottom: 2px solid black;
+          outline: none;
+        }
+
+        button {
+          border: none;
+          background-color: map-get($colores , secundario);
+          color: map-get($colores , terciario);
+          padding: 0.7em;
+          border-radius: 50px;
+          width: 50%;
+          justify-self: flex-end;
+          margin-right: auto;
+          align-self: flex-end;
+        }
+      }
+
+      .contacto__info {
+        position: relative;
+        background-size: cover;
+        width: 100%;
+        overflow: hidden;
+
+        .fondo__contactoinfo {
+          width: 100%;
+          position: absolute;
+          z-index: 0;
+          bottom: 0;
+          filter: blur(1px);
+        }
+
+        .info__texto {
+          position: absolute;
+          width: 100%;
+          gap: 25px;
+          padding: 50px 25px;
+          flex-direction: column;
+          display: flex;
+          height: 100%;
+          z-index: 2;
+          background-color: rgba(0, 0, 0, 0.662);
+
+          h4 {
+            font-size: 21px;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            li {
+              display: flex;
+              gap: 10px;
+              align-items: center;
+              font-size: 18px;
+
+              .bx {
+                font-size: 28px;
+              }
+            }
+          }
+
+          li,
+          h4,
+          i {
+            color: white;
+          }
+
+          .contacto__icons {
+            display: flex;
+            justify-content: space-between;
+            width: 60%;
+
+            .bx {
+              font-size: 30px;
+            }
+          }
+
+
+        }
+      }
+    }
+  }
+
+  @media (max-width:600px) {
+    .container {
+      .form__container {
+        flex-direction: column;
+        border-radius: 25px;
+        width: 300px;
+        position: absolute;
+        right: calc(50% - 150px);
+        height: 400px;
+        top: -500px;
+        .form__contacto {
+          width: 100%;
+        }
+
+        textarea {
+          height: 120px !important;
+        }
+
+        .contacto__info {
+          display: none;
+
+
+        }
+
+
+
+      }
+    }
+
+  }
+}

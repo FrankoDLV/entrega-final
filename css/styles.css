@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.card {
+  width: 300px;
+  height: 500px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+.card .card__info {
+  padding: 1em;
+}
+.card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.card a {
+  margin: auto;
+  position: absolute;
+  bottom: 2.5em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+  font-family: "Inter Tight", sans-serif;
+}
+
+.header {
+  background-color: #F9DBBD;
+  z-index: 2;
+  width: 100%;
+}
+.header .container {
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F9DBBD;
+  padding: 0.4em 1em;
+}
+.header .container .logo {
+  display: flex;
+  align-items: center;
+}
+.header .container h1 img {
+  width: 60px;
+}
+.header .container .bx {
+  font-size: 40px;
+  color: #450920;
+  display: none;
+}
+.header .container #btn-menu {
+  display: none;
+}
+.header .container .nav .nav_list {
+  display: flex;
+  gap: 25px;
+}
+.header .container .nav .nav_list .nav_link a {
+  color: #64635c;
+}
+@media (max-width: 600px) {
+  .header {
+    position: relative;
+    height: 60px;
+  }
+  .header .container {
+    max-width: 350px;
+  }
+  .header .container .bx {
+    display: flex;
+    font-size: 40px;
+  }
+  .header .container #btn-menu {
+    display: none;
+  }
+  .header .container #btn-menu:checked ~ .nav {
+    top: -250px;
+  }
+  .header .container .nav {
+    position: absolute;
+    top: 60px;
+    z-index: 0;
+    right: 0;
+    transition: all 0.5s ease;
+    background-color: #F9DBBD;
+  }
+  .header .container .nav .nav_list {
+    flex-direction: column;
+    width: 150px;
+    padding: 25px;
+  }
+}
+
+.main {
+  background-image: url(../image/Fondo/fondo-12.JPG);
+  background-size: cover;
+  height: 750px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .container form {
+  background-color: #F9DBBD;
+  height: 350px;
+  width: 450px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border-radius: 25px;
+  justify-content: space-around;
+  box-shadow: 0px 12px 38px 1px rgb(0, 0, 0);
+  -webkit-box-shadow: 0px 12px 38px 1px rgb(0, 0, 0);
+}
+.main .container form h3 {
+  font-weight: 200;
+}
+.main .container form input {
+  border: none;
+  background-color: #F9DBBD;
+  border-bottom: 1.5px solid #450920;
+}
+.main .container form button {
+  padding: 0.5em 0;
+  border-radius: 50px;
+  width: 200px;
+  left: 50%;
+  border: none;
+  background-color: #450920;
+  color: white;
+}
+.main .container form button:hover {
+  padding: 10px;
+  box-shadow: 0px 12px 38px 1px rgb(143, 86, 86);
+  -webkit-box-shadow: 0px 12px 38px 1px rgb(125, 111, 111);
+}
+
+@media (max-width: 600px) {
+  .container form {
+    width: 300px;
+  }
+}
+.servicios {
+  background-color: #f6e3d1;
+  background-size: cover;
+  padding: 100px 0;
+}
+.servicios h2 {
+  text-align: center;
+  color: #450920;
+  font-size: 25px;
+}
+.servicios .container {
+  margin: 30px auto;
+  max-width: 1300px;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  display: flex;
+  gap: 50px;
+}
+.servicios .container .card {
+  height: 700px;
+}
+.servicios .button {
+  background-color: #f6e3d1;
+  color: #450920;
+  border-radius: 10px;
+  padding: 7px;
+  border-bottom: 3px solid #450920;
+  border-right: 2px solid #450920;
+}
+.servicios .button:hover {
+  padding: 7.8px;
+}
+
+.cursos {
+  background-color: #f6e3d1;
+  background-size: cover;
+  padding: 100px 0;
+}
+.cursos h2 {
+  text-align: center;
+  color: #450920;
+  font-size: 30px;
+}
+.cursos .container {
+  margin: 30px auto;
+  max-width: 1300px;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  display: flex;
+  gap: 50px;
+}
+.cursos .container .cursos__card {
+  width: 300px;
+  height: 500px;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  width: 500px;
+  height: 200px;
+  flex-direction: row;
+}
+.cursos .container .cursos__card .card__info {
+  padding: 1em;
+}
+.cursos .container .cursos__card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.cursos .container .cursos__card a {
+  margin: auto;
+  position: absolute;
+  bottom: 2.5em;
+}
+.cursos .container .cursos__card .card__info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.cursos .container .cursos__card .card__info a {
+  position: initial;
+}
+@media (max-width: 600px) {
+  .cursos .container {
+    max-width: 350px;
+  }
+  .cursos .container .cursos__card {
+    width: 200px;
+    height: 450px;
+    flex-direction: column;
+  }
+  .cursos .container .cursos__card img {
+    height: 250px;
+  }
+}
+
+.hero__contacto {
+  background-image: url(../image/Fondo/fondo-11.JPG);
+  background-size: cover;
+}
+.hero__contacto .container {
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 50px 0;
+  height: 750px;
+}
+.hero__contacto .container p {
+  color: white;
+  font-size: 30px;
+  font-weight: 200px;
+}
+.hero__contacto .container h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 200px;
+}
+@media (max-width: 600px) {
+  .hero__contacto .container p {
+    text-align: center;
+    width: 300px;
+  }
+}
+
+.contacto {
+  position: relative;
+}
+.contacto .container .form__container {
+  background-color: #F9DBBD;
+  position: absolute;
+  display: flex;
+  border-radius: 25px;
+  top: -500px;
+  right: calc(50% - 300px);
+  margin: auto;
+  width: 600px;
+  height: 380px;
+}
+.contacto .container .form__container .form__contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 25px;
+  width: 100%;
+}
+.contacto .container .form__container .form__contacto .nombre {
+  display: flex;
+  gap: 10px;
+}
+.contacto .container .form__container .form__contacto .datos {
+  display: flex;
+  gap: 10px;
+}
+.contacto .container .form__container .form__contacto input {
+  background-color: #F9DBBD;
+  border: none;
+  border-bottom: 1px solid black;
+  width: 100%;
+  gap: 15px;
+  height: 35px;
+  font-size: 14px;
+  outline: none;
+}
+.contacto .container .form__container .form__contacto textarea {
+  background-color: #F9DBBD;
+  border: none;
+  height: 500px;
+  resize: none;
+  font-size: 14px;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+.contacto .container .form__container .form__contacto button {
+  border: none;
+  background-color: #450920;
+  color: #f6e3d1;
+  padding: 0.7em;
+  border-radius: 50px;
+  width: 50%;
+  justify-self: flex-end;
+  margin-right: auto;
+  align-self: flex-end;
+}
+.contacto .container .form__container .contacto__info {
+  position: relative;
+  background-size: cover;
+  width: 100%;
+  overflow: hidden;
+}
+.contacto .container .form__container .contacto__info .fondo__contactoinfo {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  filter: blur(1px);
+}
+.contacto .container .form__container .contacto__info .info__texto {
+  position: absolute;
+  width: 100%;
+  gap: 25px;
+  padding: 50px 25px;
+  flex-direction: column;
+  display: flex;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.662);
+}
+.contacto .container .form__container .contacto__info .info__texto h4 {
+  font-size: 21px;
+}
+.contacto .container .form__container .contacto__info .info__texto ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contacto .container .form__container .contacto__info .info__texto ul li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  font-size: 18px;
+}
+.contacto .container .form__container .contacto__info .info__texto ul li .bx {
+  font-size: 28px;
+}
+.contacto .container .form__container .contacto__info .info__texto li,
+.contacto .container .form__container .contacto__info .info__texto h4,
+.contacto .container .form__container .contacto__info .info__texto i {
+  color: white;
+}
+.contacto .container .form__container .contacto__info .info__texto .contacto__icons {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.contacto .container .form__container .contacto__info .info__texto .contacto__icons .bx {
+  font-size: 30px;
+}
+@media (max-width: 600px) {
+  .contacto .container .form__container {
+    flex-direction: column;
+    border-radius: 25px;
+    width: 300px;
+    position: absolute;
+    right: calc(50% - 150px);
+    height: 400px;
+    top: -500px;
+  }
+  .contacto .container .form__container .form__contacto {
+    width: 100%;
+  }
+  .contacto .container .form__container textarea {
+    height: 120px !important;
+  }
+  .contacto .container .form__container .contacto__info {
+    display: none;
+  }
+}
+
+.footer {
+  background-color: #F9DBBD;
+}
+.footer .container {
+  max-width: 1440px;
+  padding: 50px 0;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+.footer .container div {
+  text-align: center;
+}
+.footer .container .footer__logo img {
+  width: 80px;
+}
+@media (max-width: 680px) {
+  .footer {
+    padding: 50px;
+  }
+  .footer .container {
+    max-width: 350px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  .footer .container div {
+    text-align: center;
+  }
+  .footer .footer__logo img {
+    width: 100px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,60 @@
+.main {
+    background-image: url(../image/Fondo/fondo-12.JPG);
+    background-size: cover;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .container {
+        form {
+        
+            background-color: map-get($colores , primario);
+            height: 350px;
+            width: 450px;
+            padding: 25px;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            border-radius: 25px;
+            justify-content: space-around;
+            box-shadow:  0px 12px 38px 1px rgba(0, 0, 0, 1);
+-webkit-box-shadow:  0px 12px 38px 1px rgba(0, 0, 0, 1);
+            h3 {
+                font-weight: 200;
+
+            }
+            input {
+                border: none;
+                background-color: map-get($colores , primario );
+                border-bottom: 1.5px solid map-get($colores , secundario );
+            }
+
+            button {
+                padding: 0.5em 0;
+                border-radius: 50px;
+                width: 200px;
+                left: 50%;
+                border: none;
+                background-color: map-get($colores , secundario );
+                color: white;
+           
+            }
+            button:hover {
+                padding: 10px;
+                box-shadow:  0px 12px 38px 1px rgb(143, 86, 86);
+-webkit-box-shadow:  0px 12px 38px 1px rgb(125, 111, 111)
+            }
+            }
+
+
+        }
+
+    }
+    @media (max-width :600px) {
+        .container{
+            form {
+                width: 300px;
+            }
+        }
+        
+    }
