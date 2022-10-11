@@ -40,23 +40,25 @@
   width: 100%;
 }
 .header .container {
-  max-width: 1440px;
+  max-width: 1920px;
   margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 80px;
   background-color: #F9DBBD;
-  padding: 0.4em 1em;
+  padding: 0.4em 3em;
 }
 .header .container .logo {
   display: flex;
+  align-content: center;
   align-items: center;
 }
 .header .container h1 img {
-  width: 60px;
+  width: 70px;
 }
 .header .container .bx {
-  font-size: 40px;
+  font-size: 60px;
   color: #450920;
   display: none;
 }
@@ -71,29 +73,27 @@
   color: #64635c;
 }
 @media (max-width: 600px) {
-  .header {
-    position: relative;
-    height: 60px;
-  }
   .header .container {
-    max-width: 350px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 600px;
   }
   .header .container .bx {
     display: flex;
-    font-size: 40px;
+    font-size: 60px;
   }
   .header .container #btn-menu {
     display: none;
   }
   .header .container #btn-menu:checked ~ .nav {
-    top: -250px;
+    top: -350px;
   }
   .header .container .nav {
     position: absolute;
-    top: 60px;
-    z-index: 0;
+    top: 70px;
+    z-index: 1;
     right: 0;
-    transition: all 0.5s ease;
+    transition: all 0.7s ease;
     background-color: #F9DBBD;
   }
   .header .container .nav .nav_list {
@@ -127,8 +127,8 @@
   text-align: center;
   border-radius: 25px;
   justify-content: space-around;
-  box-shadow: 2px 12px 38px 1px rgb(249, 225, 146);
-  -webkit-box-shadow: 2px 12px 38px 1px rgb(247, 229, 167);
+  box-shadow: 2px 2px 8px 1px rgb(238, 223, 7);
+  -webkit-box-shadow: 2px 2px 18px 1px rgb(24, 24, 22);
 }
 .main .container form h3 {
   font-weight: 200;
@@ -149,15 +149,19 @@
 }
 .main .container form button:hover {
   padding: 10px;
-  box-shadow: 0px 12px 38px 1px rgb(143, 86, 86);
-  -webkit-box-shadow: 0px 12px 38px 1px rgb(125, 111, 111);
+  background: #F9DBBD;
+  transition: all 0.6s;
+  font-size: 20px;
+  color: #450920;
+  box-shadow: 0px 2px 38px 1px #450920;
+  -webkit-box-shadow: 0px 12px 38px 1px #450920;
 }
-
 @media (max-width: 600px) {
-  .main .container form {
+  .main .main .container form {
     width: 300px;
   }
 }
+
 .servicios {
   background-color: #f6e3d1;
   background-size: cover;
@@ -194,7 +198,7 @@
 .cursos {
   background-color: #f6e3d1;
   background-size: cover;
-  padding: 100px 0;
+  padding: 30px 0;
 }
 .cursos h2 {
   text-align: center;
@@ -202,9 +206,11 @@
   font-size: 30px;
 }
 .cursos .container {
-  margin: 30px auto;
+  display: flex;
+  margin: 50px auto;
   max-width: 1300px;
-  justify-content: space-around;
+  text-align: center;
+  justify-content: flex-start;
   flex-flow: row wrap;
   display: flex;
   gap: 50px;
@@ -219,8 +225,9 @@
   align-items: center;
   overflow: hidden;
   position: relative;
-  width: 500px;
-  height: 200px;
+  width: 560px;
+  display: flex;
+  height: 400px;
   flex-direction: row;
 }
 .cursos .container .cursos__card .card__info {
@@ -236,24 +243,126 @@
   position: absolute;
   bottom: 2.5em;
 }
-.cursos .container .cursos__card .card__info {
-  width: 100%;
+.cursos .container .cursos__card img {
   height: 100%;
+}
+.cursos .container .cursos__card .card__info {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+  align-self: center;
+  display: flex;
+  height: 350px;
+  justify-content: flex-start;
 }
 .cursos .container .cursos__card .card__info a {
-  position: initial;
+  position: absolute;
+  width: 230px;
+  height: 60px;
+  text-align: initial;
+  background-color: #F9DBBD;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  color: #450920;
+  text-decoration: none;
+  letter-spacing: 0.2em;
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.cursos .container .cursos__card .card__info a::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  background: #cdb69f;
+  transform: scaleX(0);
+  transition: transform 0.9s ease-in-out;
+  transform-origin: right;
+}
+.cursos .container .cursos__card .card__info a:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+.cursos .container .cursos__card .card__info a span {
+  display: inline-block;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+.cursos .container .cursos__card .card__info a:hover span {
+  color: #F9DBBD;
+}
+.cursos .container .cursos__card .card__info a i {
+  position: relative;
+  display: inline-block;
+  width: 3px;
+  height: 40px;
+  background: #450920;
+  transition: 0.5s, width 1s, height 0.5s;
+  transition-delay: 0s, 0.5s, 1s;
+}
+.cursos .container .cursos__card .card__info a:hover i {
+  width: 30px;
+  height: 1px;
+  background: #F9DBBD;
+  transition-delay: 0s, 1s, 0.5s;
+}
+.cursos .container .cursos__card .card__info a i::before {
+  content: "";
+  position: absolute;
+  top: 0.5px;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background: transparent;
+  rotate: 0;
+  transform-origin: right;
+  transition: 1s;
+}
+.cursos .container .cursos__card .card__info a:hover i::before {
+  background: #F9DBBD;
+  rotate: 45deg;
+  transition-delay: 0.5s;
+}
+.cursos .container .cursos__card .card__info a i::after {
+  content: "";
+  position: absolute;
+  top: -0.5px;
+  right: 0;
+  width: 50%;
+  height: 2px;
+  background: transparent;
+  rotate: 0;
+  transform-origin: right;
+  transition: 0.5s;
+}
+.cursos .container .cursos__card .card__info a:hover i::after {
+  background: #F9DBBD;
+  rotate: -45deg;
+  transition-delay: 1s;
+}
+.cursos .container .cursos__card .card__info a:hover {
+  padding: 18px;
+  transition: all 0.5s;
 }
 @media (max-width: 600px) {
   .cursos .container {
     max-width: 350px;
   }
   .cursos .container .cursos__card {
-    width: 200px;
-    height: 450px;
+    display: flex;
+    width: 250px;
+    height: 550px;
     flex-direction: column;
+  }
+  .cursos .container .cursos__card .cursos__info {
+    display: flex;
+    height: 500px;
   }
   .cursos .container .cursos__card img {
     height: 250px;
@@ -265,22 +374,22 @@
   background-size: cover;
 }
 .hero__contacto .container {
-  max-width: 1440px;
+  max-width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: flex-start;
   padding: 50px 0;
-  height: 750px;
+  height: 850px;
 }
 .hero__contacto .container p {
   color: white;
-  font-size: 30px;
+  font-size: 45px;
   font-weight: 200px;
 }
 .hero__contacto .container h2 {
   color: white;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 200px;
 }
 @media (max-width: 600px) {
@@ -424,6 +533,103 @@
   }
 }
 
+.galeria {
+  background-color: #cdb69f;
+}
+.galeria .galeriaCarrousel {
+  display: block;
+  justify-content: flex-end;
+}
+
+.img_carrousel {
+  margin: 30px auto;
+  display: flex;
+  width: 90%;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px auto;
+}
+.img_carrousel h1 {
+  font-size: 70px;
+  color: #450920;
+  font-family: "Inter Tight", sans-serif;
+  text-align: center;
+}
+.img_carrousel .carousel {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  border: 7px solid #F9DBBD;
+  display: flex;
+}
+.img_carrousel .carousel img {
+  width: 400px;
+}
+
+@media (min-width: 650px) and (max-width: 870px) {
+  .galeriaCarrousel {
+    display: block;
+    max-width: 850px;
+  }
+  .galeriaCarrousel .img_carrousel {
+    display: block;
+    align-items: center;
+    justify-content: center;
+    margin: 12px auto;
+  }
+  .galeriaCarrousel .img_carrousel h1 {
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #450920;
+    font-family: "Inter Tight", sans-serif;
+  }
+  .galeriaCarrousel .carousel {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: 10px auto;
+    border: 2px solid #cdb69f;
+    display: flex;
+  }
+  .galeriaCarrousel .carousel img {
+    width: 500px;
+  }
+}
+@media (max-width: 650px) {
+  .galeriaCarrousel {
+    display: block;
+    max-width: 600px;
+  }
+  .galeriaCarrousel .img_carrousel {
+    display: block;
+    position: relative;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px auto;
+  }
+  .galeriaCarrousel .img_carrousel h1 {
+    font-size: 25px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #450920;
+    font-family: "Inter Tight", sans-serif;
+  }
+  .galeriaCarrousel .carousel {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    margin: 10px auto;
+    border: 2px solid #cdb69f;
+    display: block;
+  }
+  .galeriaCarrousel .carousel img {
+    width: 300px;
+  }
+}
 .footer {
   background-image: url(../image/Fondo/footer.png);
   background-size: cover;
@@ -433,7 +639,7 @@
   padding: 50px 0;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   gap: 25px;
 }
@@ -441,23 +647,28 @@
   text-align: center;
 }
 .footer .container .footer__logo img {
-  width: 80px;
+  width: 130px;
   margin-left: 1em;
 }
 .footer .container .footer__registro .footer_form {
-  margin-right: 0.9em;
+  margin-right: 0.3em;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 5px;
 }
 .footer .container .footer__registro .footer_form input {
-  background-color: #f6e3d1;
+  background-color: #F9DBBD;
+  background: transparent;
   color: #450920;
+  font-size: 20px;
+  text-align: center;
+  height: 30px;
   border: 2px solid black;
 }
 .footer .container .footer__registro button {
-  width: 60%;
+  width: 70%;
   background-color: #f6e3d1;
   border-color: #450920;
   border-right: 3.7px solid #450920;
@@ -465,6 +676,20 @@
   color: #450920;
   border-radius: 6px;
   padding: 5px;
+}
+@media (max-width: 870px) {
+  .footer .container {
+    max-width: 80%;
+    display: block;
+  }
+  .footer .container .footer__registro {
+    justify-content: center;
+    display: block;
+  }
+  .footer .container .footer__registro .footer_form {
+    display: flex;
+    align-items: center;
+  }
 }
 @media (max-width: 680px) {
   .footer {
@@ -477,6 +702,10 @@
     flex-direction: column;
     align-items: center;
     gap: 25px;
+  }
+  .footer .container .footer__registro .footer_form {
+    display: flex;
+    align-items: center;
   }
   .footer .container div {
     text-align: center;

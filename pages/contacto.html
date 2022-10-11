@@ -1,128 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../css/styles.css" />
-    <title>Contacto</title>
-  </head>
 
-  <body>
-    <header class="header">
-      <div class="container">
-        <h1 class="logo">
-          <img src="../image/logo.png" alt="nails" />
-        </h1>
-        <label for="btn-menu"><i class="bx bx-menu"></i></label>
-        <input type="checkbox" id="btn-menu" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <title>Contacto</title>
+</head>
 
-        <nav class="nav">
-          <ul class="nav_list">
-            <li class="nav_link"><a href="../index.html">Inicio</a></li>
-            <li class="nav_link"><a href="./servicios.html">Servicio</a></li>
-            <li class="nav_link"><a href="./galeria.html">Galeria</a></li>
-            <li class="nav_link"><a href="./cursos.html">Cursos</a></li>
-            <li class="nav_link"><a href="./contacto.html">Contacto</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- FIN DEL HEADER -->
+<body>
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">
+        <img src="../image/logo.png" alt="nails" />
+      </h1>
+      <label for="btn-menu"><i class="bx bx-menu"></i></label>
+      <input type="checkbox" id="btn-menu" />
 
-    <div class="hero__contacto">
-      <div class="container">
-        <h2>Contacto</h2>
-        <p>Consultanos sobre los cursos y precios !</p>
+      <nav class="nav">
+        <ul class="nav_list">
+          <li class="nav_link"><a href="../index.html">Inicio</a></li>
+          <li class="nav_link"><a href="./servicios.html">Servicio</a></li>
+          <li class="nav_link"><a href="./galeria.html">Galeria</a></li>
+          <li class="nav_link"><a href="./cursos.html">Cursos</a></li>
+          <li class="nav_link"><a href="./contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- FIN DEL HEADER -->
+
+  <div class="hero__contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p>Consultanos sobre los cursos y precios !</p>
+    </div>
+  </div>
+  <section class="contacto">
+    <div class="container">
+      <div class="form__container">
+        <form action="" class="form__contacto">
+          <h4>Envianos un mensaje</h4>
+          <div class="nombre">
+            <input type="text" placeholder="Nombre" />
+            <input type="text" placeholder="Apellido" />
+          </div>
+
+          <div class="datos">
+            <input type="text" placeholder="telefono" />
+            <input type="text" placeholder="email" />
+          </div>
+          <textarea name="textarea" id="" placeholder="Escribi tu comentario"></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <div class="contacto__info">
+          <img src="../image/mano.jpg" alt="" class="fondo__contactoinfo" />
+          <div class="info__texto">
+            <h4>Contacto info</h4>
+            <ul>
+              <li><i class="bx bxs-phone"></i>2664 167278</li>
+              <li><i class="bx bx-envelope"></i>lulinails@gmail.com</li>
+              
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
-    <section class="contacto">
-      <div class="container">
-        <div class="form__container">
-          <form action="" class="form__contacto">
-            <h4>Envianos un mensaje</h4>
-            <div class="nombre">
-              <input type="text" placeholder="Nombre" />
-              <input type="text" placeholder="Apellido" />
-            </div>
+    </div>
+  </section>
 
-            <div class="datos">
-              <input type="text" placeholder="telefono" />
-              <input type="text" placeholder="email" />
-            </div>
-            <textarea
-              name="textarea"
-              id=""
-              placeholder="Escribi tu comentario"
-            ></textarea>
-            <button type="submit">Enviar</button>
-          </form>
-          <div class="contacto__info">
-            <img src="../image/mano.jpg" alt="" class="fondo__contactoinfo" />
-            <div class="info__texto">
-              <h4>Contacto info</h4>
-              <ul>
-                <li><i class="bx bxs-phone"></i>2664 167278</li>
-                <li><i class="bx bx-envelope"></i>lulinails@gmail.com</li>
-              </ul>
+  <!-- FOOTER -->
 
-              <div class="contacto__icons">
-                <i class="bx bxl-facebook-square"></i>
-                <i class="bx bxl-instagram"></i>
-                <i class="bx bxl-whatsapp"></i>
-              </div>
-            </div>
-          </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">
+        <img src="../image/logo.png" alt="" />
+      </div>
+      <div class="footer__redes">
+        <h3>Redes sociales</h3>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/magicnails.mza" target="_blank" class="redes-item"><i
+                class="bx bxl-facebook-square"></i>Facebook</a>
+          </li>
+          <li>
+            <a href="https://walink.co/de93aa" target="_blank" class="redes-item"><i
+                class="bx bxl-whatsapp"></i>Whatsapp</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/luli.nails___/" target="_blank" class="redes-item"><i
+                class="bx bxl-instagram"></i>Instagram</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__contacto">
+        <h3>Contacto directo</h3>
+        <h4>nails.mendoza@gmail.com</h4>
+        <h4>nails.202@hotmail.com</h4>
+        <h4>luly_3@gmail.com</h4>
+      </div>
+      <div class="footer__registro">
+        <h3>Quiero ser cliente</h3>
+        <div class="footer_form">
+          <input type="text" placeholder="Nombre">
+          <input type="text" placeholder="telefono" />
+          <button type="submit">Suscribirme</button>
         </div>
       </div>
-    </section>
+    </div>
+  </footer>
+</body>
 
-    <!-- FOOTER -->
-
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__logo">
-          <img src="../image/logo.png" alt="" />
-        </div>
-        <div class="footer__redes">
-          <h3>Redes sociales</h3>
-          <ul>
-            <li>
-              <a href="https://www.facebook.com/magicnails.mza" class="redes-item"
-                ><i class="bx bxl-facebook-square"></i>Facebook</a
-              >
-            </li>
-            <li>
-              <a href="https://walink.co/de93aa" class="redes-item"
-                ><i class="bx bxl-whatsapp"></i>Whatsapp</a
-              >
-            </li>
-            <li>
-              <a href="https://www.instagram.com/luli.nails___/" class="redes-item"
-                ><i class="bx bxl-instagram"></i>Instagram</a
-              >
-            </li>
-          </ul>
-        </div>
-        <div class="footer__contacto">
-          <h3>Contacto directo</h3>
-          <h4>nails.mendoza@gmail.com</h4>
-          <h4>nails.202@hotmail.com</h4>
-          <h4>luly_3@gmail.com</h4>
-        </div>
-        <div class="footer__registro">
-          <h3>Quiero ser cliente</h3>
-          <div class="footer_form">
-            <input type="text" placeholder="Nombre">
-            <input type="text" placeholder="telefono" />
-            <button type="submit">Suscribirme</button>
-          </div>
-        </div>
-      </div>
-    </footer>
-  </body>
 </html>

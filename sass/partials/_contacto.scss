@@ -3,26 +3,31 @@
   background-size: cover;
 
   .container {
-    max-width: 1440px;
+    max-width: 100%;
     display: flex;
     align-items: center;
+
     flex-direction: column;
     justify-content: flex-start;
     padding: 50px 0;
-    height: 750px;
+    height: 850px;
 
     p {
       color: white;
-      font-size: 30px;
+      font-size: 45px;
       font-weight: 200px;
     }
 
     h2 {
       color: white;
-      font-size: 24px;
+      font-size: 40px;
       font-weight: 200px;
     }
+
+
   }
+
+  
 
   @media (max-width:600px) {
     .container {
@@ -181,6 +186,7 @@
         right: calc(50% - 150px);
         height: 400px;
         top: -500px;
+
         .form__contacto {
           width: 100%;
         }

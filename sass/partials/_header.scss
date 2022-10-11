@@ -1,34 +1,35 @@
 .header {
     background-color: map-get($colores , primario);
     z-index: 2;
-    
     width: 100%;
 
 
 
 
     .container {
-        max-width: 1440px;
+        max-width: 1920px;
         margin: auto;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 80px;
         background-color: map-get($colores , primario);
-        padding: 0.4em 1em;
+        padding: 0.4em 3em;
 
         .logo {
             display: flex;
+            align-content: center;
             align-items: center;
         }
 
         h1 {
             img {
-                width: 60px;
+                width: 70px;
             }
         }
 
         .bx {
-            font-size: 40px;
+            font-size: 60px;
             color: map-get($colores , secundario);
             display: none;
 
@@ -55,36 +56,35 @@
 
 
 
-    @media (max-width:600px) {
-        position: relative;
-        height: 60px;
 
+
+
+    @media (max-width:600px) {
         .container {
-            max-width: 350px;
+            display: flex;
+            justify-content: space-between;
+            max-width: 600px;
 
             .bx {
                 display: flex;
-                font-size: 40px;
+                font-size: 60px;
             }
 
             #btn-menu {
                 display: none;
 
                 &:checked~.nav {
-                    top: -250px;
-
-
+                    top: -350px;
                 }
-
             }
 
 
             .nav {
                 position: absolute;
-                top: 60px;
-                z-index: 0;
+                top: 70px;
+                z-index: 1;
                 right: 0;
-                transition: all 0.5s ease;
+                transition: all 0.7s ease;
                 background-color: map-get($colores , primario);
 
                 .nav_list {

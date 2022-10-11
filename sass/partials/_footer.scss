@@ -7,7 +7,7 @@
     padding: 50px 0;
     margin: auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     gap: 25px;
 
@@ -17,21 +17,27 @@
 
     .footer__logo {
       img {
-        width: 80px;
+        width: 130px;
         margin-left: 1em;
       }
     }
 
     .footer__registro {
       .footer_form {
-        margin-right: 0.9em;
+        margin-right: 0.3em;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         gap: 5px;
+
         input {
-          background-color: map-get($colores , terciario );
-          color: map-get($colores , secundario );
+          background-color: map-get($colores , primario);
+          background: transparent;
+          color: map-get($colores , secundario);
+          font-size: 20px;
+          text-align: center;
+          height: 30px;
           border: 2px solid black;
         }
 
@@ -39,7 +45,7 @@
 
       button {
 
-        width: 60%;
+        width: 70%;
         background-color: map-get($colores , terciario);
         border-color: map-get($colores , secundario);
         border-right: 3.7px solid map-get($colores , secundario);
@@ -50,6 +56,28 @@
       }
     }
   }
+
+  @media (max-width:870px) {
+    .container {
+      max-width: 80%;
+      display: block;
+
+      .footer__registro {
+        justify-content: center;
+
+        display: block;
+
+        .footer_form {
+          display: flex;
+          align-items: center;
+        }
+
+
+
+      }
+    }
+  }
+
 
 
   @media (max-width:680px) {
@@ -62,6 +90,13 @@
       flex-direction: column;
       align-items: center;
       gap: 25px;
+
+      .footer__registro {
+        .footer_form {
+          display: flex;
+          align-items: center;
+        }
+      }
 
       div {
         text-align: center;
@@ -80,9 +115,10 @@
           flex-direction: column;
           justify-content: center;
           gap: 5px;
+
           input {
-            background-color: map-get($colores , terciario );
-            color: map-get($colores , secundario );
+            background-color: map-get($colores , terciario);
+            color: map-get($colores , secundario);
             border: 2px solid black;
           }
         }

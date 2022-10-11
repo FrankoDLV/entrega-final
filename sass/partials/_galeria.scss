@@ -1,7 +1,134 @@
-.carousel-inner {
-    .carousel-item {
+.galeria {
+
+ background-color: map-get($colores , alternative);
+    .galeriaCarrousel {
+        display: block;
+        justify-content: flex-end;
+    }
+}
+
+.img_carrousel {
+    margin: 30px auto;
+    display: flex;
+    width: 90%;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px auto;
+
+
+    h1 {
+        
+        font-size: 70px;
+        color: map-get($colores , secundario);
+        font-family: $font-primary;
+        
+        text-align: center;
+          
+    }
+
+    .carousel {
+        display: flex;
+        justify-content: space-between;
+
+
+        width: 400px;
+
+        border: 7px solid map-get($colores , primario);
+        display: flex;
+
+
+
         img {
-            width: 100px;
+            width: 400px;
         }
     }
+}
+
+
+
+
+
+@media (min-width:650px) and (max-width:870px) {
+
+
+    .galeriaCarrousel {
+        display: block;
+        max-width: 850px;
+
+        .img_carrousel {
+
+            display: block;
+            align-items: center;
+            justify-content: center;
+            margin: 12px auto;
+
+            h1 {
+                font-size: 30px;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                color: map-get($colores , secundario);
+                font-family: $font-primary;
+            }
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: center;
+            width: 500px;
+            margin: 10px auto;
+            border: 2px solid map-get($colores , alternative);
+            display: flex;
+
+            img {
+                width: 500px;
+            }
+        }
+    }
+
+}
+
+@media (max-width:650px) {
+
+
+
+    .galeriaCarrousel {
+        display: block;
+        max-width: 600px;
+
+
+        .img_carrousel {
+
+            display: block;
+            position: relative;
+            align-items: center;
+            justify-content: space-around;
+            margin: 10px auto;
+
+
+            h1 {
+                font-size: 25px;
+                margin: 0;
+                padding: 0;
+                text-align: center;
+                color: map-get($colores , secundario);
+                font-family: $font-primary;
+            }
+        }
+
+        .carousel {
+            display: flex;
+            justify-content: space-evenly;
+            width: 300px;
+            margin: 10px auto;
+            border: 2px solid map-get($colores , alternative);
+            display: block;
+
+            img {
+                width: 300px;
+            }
+        }
+    }
+
 }

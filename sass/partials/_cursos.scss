@@ -1,35 +1,168 @@
 .cursos {
-    background-color: map-get($colores , terciario );
+    background-color: map-get($colores , terciario);
     background-size: cover;
-    padding: 100px 0;
+    padding: 30px 0;
+
     h2 {
         text-align: center;
-        color: map-get($colores , secundario );
+        color: map-get($colores , secundario);
         font-size: 30px;
     }
+
     .container {
-        margin: 30px auto;
+        display: flex;
+        margin: 50px auto;
         max-width: 1300px;
-        justify-content: space-around;
+        text-align: center;
+        justify-content: flex-start;
         flex-flow: row wrap;
         display: flex;
         gap: 50px;
+
         .cursos__card {
             @include card;
-            width: 500px;
-            height: 200px;
+            width: 560px;
+            display: flex;
+            height: 400px;
             flex-direction: row;
-        
-            .card__info {
-                width: 100%;
+
+            img {
                 height: 100%;
+            }
+
+
+            .card__info {
                 display: flex;
                 flex-direction: column;
-                justify-content: space-between;
-        
+                width: 100%;
+                gap: 20px;
+                align-self: center;
+                display: flex;
+                height: 350px;
+                justify-content: flex-start;
+
+
+                // BOTON ANIMADO
+
+
                 a {
-                    position: initial;
-        
+                    position: absolute;
+                    width: 230px;
+                    height: 60px;
+                    text-align: initial;
+                    background-color: map-get($colores , primario);
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 10px;
+                    color: map-get($colores , secundario);
+                    text-decoration: none;
+                    letter-spacing: 0.2em;
+                    font-size: 1em;
+                    text-transform: uppercase;
+                    font-weight: 500;
+                }
+
+                a::before {
+                    content: '';
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 10px;
+                    background: map-get($colores , alternative);
+                    transform: scaleX(0);
+                    transition: transform 0.9s ease-in-out;
+                    transform-origin: right;
+
+                }
+
+                a:hover::before {
+                    transform: scaleX(1);
+                    transform-origin: left;
+
+
+                }
+
+                a span {
+                    display: inline-block;
+                    z-index: 1;
+                    transition: 0.5s ease-in-out;
+                }
+
+                a:hover span {
+                    color: map-get($colores , primario);
+                }
+
+                a i {
+                    position: relative;
+                    display: inline-block;
+                    width: 3px;
+                    height: 40px;
+                    background: map-get($colores , secundario);
+                    transition: 0.5s, width 1s, height 0.5s;
+                    transition-delay: 0s, 0.5s, 1s;
+
+                }
+
+                a:hover i {
+                    width: 30px;
+                    height: 1px;
+                    background: map-get($colores , primario);
+                    transition-delay: 0s, 1s, 0.5s;
+                }
+
+                a i::before {
+                    content: '';
+                    position: absolute;
+                    top: 0.5px;
+                    right: 0;
+                    width: 50%;
+                    height: 2px;
+                    background: transparent;
+                    rotate: 0;
+                    transform-origin: right;
+                    transition: 1s;
+
+                }
+
+
+                a:hover i::before {
+                    background: map-get($colores , primario);
+                    rotate: 45deg;
+                    transition-delay: 0.5s;
+
+                }
+
+
+                a i::after {
+                    content: '';
+                    position: absolute;
+                    top: -0.5px;
+                    right: 0;
+                    width: 50%;
+                    height: 2px;
+                    background: transparent;
+                    rotate: 0;
+                    transform-origin: right;
+                    transition: 0.5s;
+
+                }
+
+
+                a:hover i::after {
+                    background: map-get($colores , primario);
+                    rotate: -45deg;
+                    transition-delay: 1s;
+
+                }
+
+                // FIN DEL BOTON ANIMADO
+
+                a:hover {
+                    padding: 18px;
+                    transition: all 0.5s;
+
                 }
             }
         }
@@ -37,21 +170,26 @@
 
 
     @media (max-width: 600px) {
-       .container {
-        max-width: 350px;
-        .cursos__card {
+        .container {
+            max-width: 350px;
 
-            width: 200px;
-            height: 450px;
-            flex-direction: column;
-            img {
-                height: 250px;
+            .cursos__card {
+                display: flex;
+
+                width: 250px;
+                height: 550px;
+                flex-direction: column;
+
+                .cursos__info {
+                    display: flex;
+                    height: 500px;
+
+                }
+
+                img {
+                    height: 250px;
+                }
             }
         }
-       } 
     }
 }
-
-
-
-
