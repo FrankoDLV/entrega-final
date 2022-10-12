@@ -156,12 +156,26 @@
   box-shadow: 0px 2px 38px 1px #450920;
   -webkit-box-shadow: 0px 12px 38px 1px #450920;
 }
-@media (max-width: 600px) {
-  .main .main .container form {
-    width: 300px;
+
+@media (max-width: 650px) {
+  .main h1 {
+    font-size: 30px;
+  }
+  .main .container {
+    display: flex;
+    justify-content: center;
+  }
+  .main .container .form__index {
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main .container .form__index button {
+    width: 130px;
+    height: 40px;
   }
 }
-
 .servicios {
   background-color: #f6e3d1;
   background-size: cover;
@@ -352,20 +366,30 @@
 }
 @media (max-width: 600px) {
   .cursos .container {
-    max-width: 350px;
+    max-width: 550px;
+    display: flex;
+    justify-content: center;
   }
   .cursos .container .cursos__card {
     display: flex;
-    width: 250px;
-    height: 550px;
     flex-direction: column;
+    width: 300px;
+    height: 650px;
+    align-self: center;
   }
-  .cursos .container .cursos__card .cursos__info {
+  .cursos .container .cursos__card .card__info {
     display: flex;
-    height: 500px;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 13px;
+    align-items: center;
+    display: flex;
+    height: 350px;
+    justify-content: flex-start;
   }
   .cursos .container .cursos__card img {
-    height: 250px;
+    height: 300px;
   }
 }
 
