@@ -59,21 +59,22 @@
 
 
 
-    @media (max-width:600px) {
+    @media (max-width:650px) {
         .container {
             display: flex;
             justify-content: space-between;
-            max-width: 600px;
+            max-width: 650px;
 
             .bx {
                 display: flex;
-                font-size: 60px;
+                font-size: 40px;
             }
 
             #btn-menu {
                 display: none;
 
-                &:checked~.nav {
+                &:checked~
+                .nav {
                     top: -350px;
                 }
             }
@@ -84,7 +85,7 @@
                 top: 70px;
                 z-index: 1;
                 right: 0;
-                transition: all 0.7s ease;
+                transition: all 0.9s ease;
                 background-color: map-get($colores , primario);
 
                 .nav_list {

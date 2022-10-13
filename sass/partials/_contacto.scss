@@ -178,11 +178,10 @@
 
 
 
+
+
+
   // MEDIA Q
-
-
-
-
 
   @media (max-width: 600px) {
     .container {
@@ -223,14 +222,13 @@
 @media (max-width: 800px) {
   .hero__contacto {
     .container {
-
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       padding: 50px 20px;
       height: 750px;
       text-align: center;
-      
+
 
       p {
         font-size: 35px;
@@ -238,11 +236,9 @@
       }
 
       h2 {
-
         font-size: 30px;
         font-weight: 200px;
       }
-
     }
 
   }

@@ -72,15 +72,15 @@
 .header .container .nav .nav_list .nav_link a {
   color: #64635c;
 }
-@media (max-width: 600px) {
+@media (max-width: 650px) {
   .header .container {
     display: flex;
     justify-content: space-between;
-    max-width: 600px;
+    max-width: 650px;
   }
   .header .container .bx {
     display: flex;
-    font-size: 60px;
+    font-size: 40px;
   }
   .header .container #btn-menu {
     display: none;
@@ -93,7 +93,7 @@
     top: 70px;
     z-index: 1;
     right: 0;
-    transition: all 0.7s ease;
+    transition: all 0.9s ease;
     background-color: #F9DBBD;
   }
   .header .container .nav .nav_list {
