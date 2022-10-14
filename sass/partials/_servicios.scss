@@ -2,11 +2,13 @@
   background-color: map-get($colores, terciario);
   background-size: cover;
   padding: 100px 0;
+
   h2 {
     text-align: center;
     color: map-get($colores, secundario);
     font-size: 25px;
   }
+
   .container {
     margin: 30px auto;
     max-width: 1300px;
@@ -14,20 +16,23 @@
     flex-flow: row wrap;
     display: flex;
     gap: 50px;
+
     .card {
       height: 700px;
     }
   }
+
   .button {
-    background-color: map-get($colores , terciario );
-    color: map-get($colores , secundario );
+    background-color: map-get($colores , terciario);
+    color: map-get($colores , secundario);
     border-radius: 10px;
     padding: 7px;
-    border-bottom: 3px solid map-get($colores , secundario );
-    border-right: 2px solid map-get($colores , secundario );
+    border-bottom: 3px solid map-get($colores , secundario);
+    border-right: 2px solid map-get($colores , secundario);
   }
+
   .button:hover {
     padding: 7.8px;
-    
+
   }
 }

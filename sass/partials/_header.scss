@@ -73,8 +73,7 @@
             #btn-menu {
                 display: none;
 
-                &:checked~
-                .nav {
+                &:checked~.nav {
                     top: -350px;
                 }
             }
