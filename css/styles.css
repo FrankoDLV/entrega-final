@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 .card {
   width: 300px;
   height: 500px;
@@ -10,14 +11,17 @@
   overflow: hidden;
   position: relative;
 }
+
 .card .card__info {
   padding: 1em;
 }
+
 .card img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
+
 .card a {
   margin: auto;
   position: absolute;
@@ -38,7 +42,10 @@
   background-color: #F9DBBD;
   z-index: 2;
   width: 100%;
+  position: fixed;
+  top: 0;
 }
+
 .header .container {
   max-width: 1920px;
   margin: auto;
@@ -49,53 +56,65 @@
   background-color: #F9DBBD;
   padding: 0.4em 3em;
 }
+
 .header .container .logo {
   display: flex;
   align-content: center;
   align-items: center;
 }
+
 .header .container h1 img {
   width: 70px;
 }
+
 .header .container .bx {
   font-size: 60px;
   color: #450920;
   display: none;
 }
+
 .header .container #btn-menu {
   display: none;
 }
+
 .header .container .nav .nav_list {
   display: flex;
   gap: 25px;
 }
+
 .header .container .nav .nav_list .nav_link a {
   color: #64635c;
 }
+
 @media (max-width: 650px) {
   .header .container {
     display: flex;
     justify-content: space-between;
     max-width: 650px;
   }
+
   .header .container .bx {
     display: flex;
     font-size: 40px;
   }
+
   .header .container #btn-menu {
     display: none;
   }
-  .header .container #btn-menu:checked ~ .nav {
-    top: -350px;
+
+  .header .container #btn-menu:checked~.nav {
+    transform: translateX(-150px);
   }
+
   .header .container .nav {
     position: absolute;
     top: 70px;
     z-index: 1;
-    right: 0;
+    right: -150px;
     transition: all 0.9s ease;
     background-color: #F9DBBD;
   }
+
   .header .container .nav .nav_list {
     flex-direction: column;
     width: 150px;
@@ -112,11 +131,13 @@
   justify-content: center;
   align-items: center;
 }
+
 .main h1 {
   position: relative;
   top: -2rem;
   color: #f6e3d1;
 }
+
 .main .container form {
   background-color: #F9DBBD;
   height: 350px;
@@ -130,14 +151,17 @@
   box-shadow: 2px 2px 8px 1px rgb(238, 223, 7);
   -webkit-box-shadow: 2px 2px 18px 1px rgb(24, 24, 22);
 }
+
 .main .container form h3 {
   font-weight: 200;
 }
+
 .main .container form input {
   border: none;
   background-color: #F9DBBD;
   border-bottom: 1.5px solid #450920;
 }
+
 .main .container form button {
   padding: 0.5em 0;
   border-radius: 50px;
@@ -147,6 +171,7 @@
   background-color: #450920;
   color: white;
 }
+
 .main .container form button:hover {
   padding: 10px;
   background: #F9DBBD;
@@ -161,31 +186,37 @@
   .main h1 {
     font-size: 30px;
   }
+
   .main .container {
     display: flex;
     justify-content: center;
   }
+
   .main .container .form__index {
     max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+
   .main .container .form__index button {
     width: 130px;
     height: 40px;
   }
 }
+
 .servicios {
   background-color: #f6e3d1;
   background-size: cover;
   padding: 100px 0;
 }
+
 .servicios h2 {
   text-align: center;
   color: #450920;
   font-size: 25px;
 }
+
 .servicios .container {
   margin: 30px auto;
   max-width: 1300px;
@@ -194,9 +225,11 @@
   display: flex;
   gap: 50px;
 }
+
 .servicios .container .card {
   height: 700px;
 }
+
 .servicios .button {
   background-color: #f6e3d1;
   color: #450920;
@@ -205,6 +238,7 @@
   border-bottom: 3px solid #450920;
   border-right: 2px solid #450920;
 }
+
 .servicios .button:hover {
   padding: 7.8px;
 }
@@ -214,11 +248,13 @@
   background-size: cover;
   padding: 30px 0;
 }
+
 .cursos h2 {
   text-align: center;
   color: #450920;
   font-size: 30px;
 }
+
 .cursos .container {
   display: flex;
   margin: 50px auto;
@@ -229,6 +265,7 @@
   display: flex;
   gap: 50px;
 }
+
 .cursos .container .cursos__card {
   width: 300px;
   height: 500px;
@@ -244,22 +281,27 @@
   height: 400px;
   flex-direction: row;
 }
+
 .cursos .container .cursos__card .card__info {
   padding: 1em;
 }
+
 .cursos .container .cursos__card img {
   width: 100%;
   height: 300px;
   object-fit: cover;
 }
+
 .cursos .container .cursos__card a {
   margin: auto;
   position: absolute;
   bottom: 2.5em;
 }
+
 .cursos .container .cursos__card img {
   height: 100%;
 }
+
 .cursos .container .cursos__card .card__info {
   display: flex;
   flex-direction: column;
@@ -270,6 +312,7 @@
   height: 350px;
   justify-content: flex-start;
 }
+
 .cursos .container .cursos__card .card__info a {
   position: absolute;
   width: 230px;
@@ -288,6 +331,7 @@
   text-transform: uppercase;
   font-weight: 500;
 }
+
 .cursos .container .cursos__card .card__info a::before {
   content: "";
   position: absolute;
@@ -299,18 +343,22 @@
   transition: transform 0.9s ease-in-out;
   transform-origin: right;
 }
+
 .cursos .container .cursos__card .card__info a:hover::before {
   transform: scaleX(1);
   transform-origin: left;
 }
+
 .cursos .container .cursos__card .card__info a span {
   display: inline-block;
   z-index: 1;
   transition: 0.5s ease-in-out;
 }
+
 .cursos .container .cursos__card .card__info a:hover span {
   color: #F9DBBD;
 }
+
 .cursos .container .cursos__card .card__info a i {
   position: relative;
   display: inline-block;
@@ -320,12 +368,14 @@
   transition: 0.5s, width 1s, height 0.5s;
   transition-delay: 0s, 0.5s, 1s;
 }
+
 .cursos .container .cursos__card .card__info a:hover i {
   width: 30px;
   height: 1px;
   background: #F9DBBD;
   transition-delay: 0s, 1s, 0.5s;
 }
+
 .cursos .container .cursos__card .card__info a i::before {
   content: "";
   position: absolute;
@@ -338,11 +388,13 @@
   transform-origin: right;
   transition: 1s;
 }
+
 .cursos .container .cursos__card .card__info a:hover i::before {
   background: #F9DBBD;
   rotate: 45deg;
   transition-delay: 0.5s;
 }
+
 .cursos .container .cursos__card .card__info a i::after {
   content: "";
   position: absolute;
@@ -355,21 +407,25 @@
   transform-origin: right;
   transition: 0.5s;
 }
+
 .cursos .container .cursos__card .card__info a:hover i::after {
   background: #F9DBBD;
   rotate: -45deg;
   transition-delay: 1s;
 }
+
 .cursos .container .cursos__card .card__info a:hover {
   padding: 18px;
   transition: all 0.5s;
 }
+
 @media (max-width: 600px) {
   .cursos .container {
     max-width: 550px;
     display: flex;
     justify-content: center;
   }
+
   .cursos .container .cursos__card {
     display: flex;
     flex-direction: column;
@@ -377,6 +433,7 @@
     height: 650px;
     align-self: center;
   }
+
   .cursos .container .cursos__card .card__info {
     display: flex;
     flex-direction: column;
@@ -388,6 +445,7 @@
     height: 350px;
     justify-content: flex-start;
   }
+
   .cursos .container .cursos__card img {
     height: 300px;
   }
@@ -397,6 +455,7 @@
   background-image: url(../image/Fondo/fondo-11.JPG);
   background-size: cover;
 }
+
 .hero__contacto .container {
   max-width: 100%;
   display: flex;
@@ -406,16 +465,19 @@
   padding: 50px 0;
   height: 850px;
 }
+
 .hero__contacto .container p {
   color: white;
   font-size: 45px;
   font-weight: 200px;
 }
+
 .hero__contacto .container h2 {
   color: white;
   font-size: 40px;
   font-weight: 200px;
 }
+
 @media (max-width: 600px) {
   .hero__contacto .container p {
     text-align: center;
@@ -426,6 +488,7 @@
 .contacto {
   position: relative;
 }
+
 .contacto .container .form__container {
   background-color: #F9DBBD;
   position: absolute;
@@ -437,6 +500,7 @@
   width: 600px;
   height: 380px;
 }
+
 .contacto .container .form__container .form__contacto {
   display: flex;
   flex-direction: column;
@@ -444,14 +508,17 @@
   padding: 25px;
   width: 100%;
 }
+
 .contacto .container .form__container .form__contacto .nombre {
   display: flex;
   gap: 10px;
 }
+
 .contacto .container .form__container .form__contacto .datos {
   display: flex;
   gap: 10px;
 }
+
 .contacto .container .form__container .form__contacto input {
   background-color: #F9DBBD;
   border: none;
@@ -462,6 +529,7 @@
   font-size: 14px;
   outline: none;
 }
+
 .contacto .container .form__container .form__contacto textarea {
   background-color: #F9DBBD;
   border: none;
@@ -471,6 +539,7 @@
   border-bottom: 2px solid black;
   outline: none;
 }
+
 .contacto .container .form__container .form__contacto button {
   border: none;
   background-color: #450920;
@@ -482,12 +551,14 @@
   margin-right: auto;
   align-self: flex-end;
 }
+
 .contacto .container .form__container .contacto__info {
   position: relative;
   background-size: cover;
   width: 100%;
   overflow: hidden;
 }
+
 .contacto .container .form__container .contacto__info .fondo__contactoinfo {
   width: 100%;
   position: absolute;
@@ -495,6 +566,7 @@
   bottom: 0;
   filter: blur(1px);
 }
+
 .contacto .container .form__container .contacto__info .info__texto {
   position: absolute;
   width: 100%;
@@ -506,36 +578,44 @@
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.662);
 }
+
 .contacto .container .form__container .contacto__info .info__texto h4 {
   font-size: 21px;
 }
+
 .contacto .container .form__container .contacto__info .info__texto ul {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .contacto .container .form__container .contacto__info .info__texto ul li {
   display: flex;
   gap: 10px;
   align-items: center;
   font-size: 18px;
 }
+
 .contacto .container .form__container .contacto__info .info__texto ul li .bx {
   font-size: 28px;
 }
+
 .contacto .container .form__container .contacto__info .info__texto li,
 .contacto .container .form__container .contacto__info .info__texto h4,
 .contacto .container .form__container .contacto__info .info__texto i {
   color: white;
 }
+
 .contacto .container .form__container .contacto__info .info__texto .contacto__icons {
   display: flex;
   justify-content: space-between;
   width: 60%;
 }
+
 .contacto .container .form__container .contacto__info .info__texto .contacto__icons .bx {
   font-size: 30px;
 }
+
 @media (max-width: 600px) {
   .contacto .container .form__container {
     flex-direction: column;
@@ -546,12 +626,15 @@
     height: 400px;
     top: -500px;
   }
+
   .contacto .container .form__container .form__contacto {
     width: 100%;
   }
+
   .contacto .container .form__container textarea {
     height: 120px !important;
   }
+
   .contacto .container .form__container .contacto__info {
     display: none;
   }
@@ -566,18 +649,22 @@
     height: 750px;
     text-align: center;
   }
+
   .hero__contacto .container p {
     font-size: 35px;
     font-weight: 200px;
   }
+
   .hero__contacto .container h2 {
     font-size: 30px;
     font-weight: 200px;
   }
 }
+
 .galeria {
   background-color: #cdb69f;
 }
+
 .galeria .galeriaCarrousel {
   display: block;
   justify-content: flex-end;
@@ -592,12 +679,14 @@
   justify-content: space-between;
   margin: 20px auto;
 }
+
 .img_carrousel h1 {
   font-size: 70px;
   color: #450920;
   font-family: "Inter Tight", sans-serif;
   text-align: center;
 }
+
 .img_carrousel .carousel {
   display: flex;
   justify-content: space-between;
@@ -605,6 +694,7 @@
   border: 7px solid #F9DBBD;
   display: flex;
 }
+
 .img_carrousel .carousel img {
   width: 400px;
 }
@@ -614,12 +704,14 @@
     display: block;
     max-width: 850px;
   }
+
   .galeriaCarrousel .img_carrousel {
     display: block;
     align-items: center;
     justify-content: center;
     margin: 12px auto;
   }
+
   .galeriaCarrousel .img_carrousel h1 {
     font-size: 30px;
     margin: 0;
@@ -628,6 +720,7 @@
     color: #450920;
     font-family: "Inter Tight", sans-serif;
   }
+
   .galeriaCarrousel .carousel {
     display: flex;
     justify-content: center;
@@ -636,15 +729,18 @@
     border: 2px solid #cdb69f;
     display: flex;
   }
+
   .galeriaCarrousel .carousel img {
     width: 500px;
   }
 }
+
 @media (max-width: 650px) {
   .galeriaCarrousel {
     display: block;
     max-width: 600px;
   }
+
   .galeriaCarrousel .img_carrousel {
     display: block;
     position: relative;
@@ -652,6 +748,7 @@
     justify-content: space-around;
     margin: 10px auto;
   }
+
   .galeriaCarrousel .img_carrousel h1 {
     font-size: 25px;
     margin: 0;
@@ -660,6 +757,7 @@
     color: #450920;
     font-family: "Inter Tight", sans-serif;
   }
+
   .galeriaCarrousel .carousel {
     display: flex;
     justify-content: space-evenly;
@@ -668,14 +766,17 @@
     border: 2px solid #cdb69f;
     display: block;
   }
+
   .galeriaCarrousel .carousel img {
     width: 300px;
   }
 }
+
 .footer {
   background-image: url(../image/Fondo/footer.png);
   background-size: cover;
 }
+
 .footer .container {
   max-width: 1440px;
   padding: 50px 0;
@@ -685,13 +786,16 @@
   align-items: center;
   gap: 25px;
 }
+
 .footer .container div {
   text-align: center;
 }
+
 .footer .container .footer__logo img {
   width: 130px;
   margin-left: 1em;
 }
+
 .footer .container .footer__registro .footer_form {
   margin-right: 0.3em;
   display: flex;
@@ -700,6 +804,7 @@
   align-items: center;
   gap: 5px;
 }
+
 .footer .container .footer__registro .footer_form input {
   background-color: #F9DBBD;
   background: transparent;
@@ -709,6 +814,7 @@
   height: 30px;
   border: 2px solid black;
 }
+
 .footer .container .footer__registro button {
   width: 70%;
   background-color: #f6e3d1;
@@ -719,24 +825,29 @@
   border-radius: 6px;
   padding: 5px;
 }
+
 @media (max-width: 870px) {
   .footer .container {
     max-width: 80%;
     display: block;
   }
+
   .footer .container .footer__registro {
     justify-content: center;
     display: block;
   }
+
   .footer .container .footer__registro .footer_form {
     display: flex;
     align-items: center;
   }
 }
+
 @media (max-width: 680px) {
   .footer {
     padding: 50px;
   }
+
   .footer .container {
     max-width: 350px;
     margin: auto;
@@ -745,27 +856,33 @@
     align-items: center;
     gap: 25px;
   }
+
   .footer .container .footer__registro .footer_form {
     display: flex;
     align-items: center;
   }
+
   .footer .container div {
     text-align: center;
   }
+
   .footer .container .footer__logo img {
     width: 100px;
   }
+
   .footer .container .footer__registro .footer_form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 5px;
   }
+
   .footer .container .footer__registro .footer_form input {
     background-color: #f6e3d1;
     color: #450920;
     border: 2px solid black;
   }
+
   .footer .container .footer__registro button {
     width: 60%;
     background-color: #f6e3d1;
